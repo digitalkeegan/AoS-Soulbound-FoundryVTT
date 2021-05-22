@@ -64,7 +64,8 @@ Hooks.once("init", () => {
 function _registerInitiative(rule) {
     switch (rule) {
         case "default":
-            CONFIG.Combat.initiative = { formula: "@combat.initiative.total", decimals: 0 };
+            //CONFIG.Combat.initiative = { formula: "@combat.initiative.total", decimals: 0 };
+            CONFIG.Combat.initiative = { formula: "1d6 + @combat.initiative.total", decimals: 0 };
             break;
         case "roll1d6":
             CONFIG.Combat.initiative = { formula: "1d6 + @combat.initiative.total", decimals: 0 };
